@@ -18,12 +18,12 @@ jobs:
       matrix: ${{ steps.discover-releases.outputs.matrix }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: apache-ranger-compiled
 
       - name: Checkout Apache Ranger repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: apache/ranger
           fetch-depth: 0
@@ -108,7 +108,7 @@ jobs:
           done
 
       - name: Checkout Apache Ranger compiled
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: apache-ranger-compiled
 
